@@ -7,7 +7,9 @@
     "dev": "cross-env NODE_ENV=development tsx server/index.ts",
     "build": "tsx script/build.ts",
     "start": "NODE_ENV=production node dist/index.cjs",
-    "check": "tsc"
+    "check": "tsc",
+    "build:client": "vite build",
+    "build:pages": "cross-env VITE_BASE_PATH=./ vite build && node -e \"require('fs').writeFileSync('dist/public/.nojekyll','')\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
