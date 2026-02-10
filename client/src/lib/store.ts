@@ -159,7 +159,7 @@ const collectDescendantIds = (elements: Record<string, SceneElement>, rootIds: s
     });
   }
 
-  return [...collected];
+  return Array.from(collected);
 };
 
 const getWorldTransform = (elements: Record<string, SceneElement>, element: SceneElement) => {
